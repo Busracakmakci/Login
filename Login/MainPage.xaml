@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.MainPage"
+             BackgroundColor="#08003f">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Center"
+                     Spacing="20">
+
+            <Image Source="logo_duvar.png"
+                   Aspect="AspectFit"
+                   HeightRequest="200"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Hoşgeldiniz"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   TextColor="#3498DB"
+                   Margin="0,0,0,5"/>
+
+            <Frame BackgroundColor="White"
+                   CornerRadius="20"
+                   Padding="0"
+                   Margin="0,10,0,0">
+                <Entry x:Name="nickNameEntry"
+                       Placeholder="Nickname"
+                       Keyboard="Chat"
+                       TextColor="#34495e"
+                       PlaceholderColor="#95a5a6"
+                       HeightRequest="50"
+                       Margin="0,0,0,0"/>
+            </Frame>
+
+            <Frame BackgroundColor="White"
+                   CornerRadius="20"
+                   Padding="0"
+                   Margin="0,5,0,0">
+                <Entry x:Name="CodeEntry"
+                       Placeholder="Password"
+                       IsPassword="True"
+                       TextColor="#34495e"
+                       PlaceholderColor="#95a5a6"
+                       HeightRequest="50"
+                       Margin="10,0,10,0"/>
+            </Frame>
+
+            <Button Text="Login"
+                    Clicked="OnLoginButtonClicked"
+                    Margin="0,10,0,0"
+                    BackgroundColor="#3498DB"
+                    TextColor="White"
+                    FontSize="Medium"
+                    CornerRadius="20"
+                    Padding="10"
+                    HorizontalOptions="FillAndExpand"/>
+
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="Center">
+
+                <CheckBox x:Name="RememberMeCheckBox"
+                          Color="#3498DB"
+                          VerticalOptions="Center"
+                          Margin="0,0,0,0"/>
+
+                <Label Text="Remember Me"
+                       VerticalOptions="Center"
+                       TextColor="#3498DB"/>
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
